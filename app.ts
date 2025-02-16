@@ -3,10 +3,8 @@ import express from "express";
 import cors from "cors";
 const app = express();
 
-import { aihubRoutes } from "./routes";
-import { config } from "dotenv";
-
-config();
+import { aihubRoutes } from "./src/routes";
+require("dotenv").config();
 
 const PORT = process.env.PORT || 5001;
 
