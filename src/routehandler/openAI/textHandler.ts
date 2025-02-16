@@ -1,8 +1,9 @@
 import { textResponseOpenAI } from "../../services";
+import OpenAI from "openai";
 
 export const openAITextHandler = async (body: string) => {
   // construct message object
-  const message = [
+  const message: OpenAI.ChatCompletionMessageParam[] = [
     {
       role: "system",
       content: "You are a helpful assistant.",
@@ -14,7 +15,7 @@ export const openAITextHandler = async (body: string) => {
   ];
 
   // call the openAI service
-  // const response = await textResponseOpenAI()
+  const response = await textResponseOpenAI(message);
 
-  return { message };
+  return { response: response };
 };
