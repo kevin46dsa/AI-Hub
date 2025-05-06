@@ -19,4 +19,15 @@ router.post("/openai/text", async (req, res) => {
   }
 });
 
+router.post("/openai/speech", async (req, res) => {
+  const body = req.body;
+  try {
+    const response = await openAITextHandler(body.message);
+
+    res.status(200).json(response);
+  } catch (error) {
+    res.status(400).json({ message: "Error", error });
+  }
+});
+
 export default router; // Use ES module export
