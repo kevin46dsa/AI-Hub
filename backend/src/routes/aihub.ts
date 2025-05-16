@@ -10,6 +10,7 @@ router.get("/", async (req, res) => {
 
 router.post("/openai/text", async (req, res) => {
   const body = req.body;
+  console.log("body", body);
   try {
     const response = await openAITextHandler(body.message);
 

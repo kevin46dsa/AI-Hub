@@ -1,11 +1,17 @@
 // server.js
 import express from "express";
+import { config } from "dotenv";
+config();
 import cors from "cors";
 const app = express();
 
 import { aihubRoutes } from "./src/routes";
-import { config } from "dotenv";
-config();
+
+console.log("PORT:", process.env.PORT); // Should output your port number
+console.log(
+  "OPENAI_API_KEY:",
+  process.env.OPENAI_API_KEY ? "Loaded" : "Not Loaded"
+);
 
 const PORT = process.env.PORT || 5001;
 
