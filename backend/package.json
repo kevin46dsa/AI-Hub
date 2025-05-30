@@ -26,6 +26,7 @@
     "typescript": "^5.7.3"
   },
   "dependencies": {
+    "@google/genai": "^0.14.1",
     "@huggingface/inference": "^3.3.4",
     "@langchain/community": "^0.3.41",
     "@langchain/core": "^0.3.46",

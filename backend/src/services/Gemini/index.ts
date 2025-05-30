@@ -1,0 +1,1 @@
+export { geminiApi } from "./GeminiAPI";
